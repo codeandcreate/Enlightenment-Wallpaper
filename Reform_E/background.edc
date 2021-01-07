@@ -1,0 +1,50 @@
+collections {
+   group { 
+      name: "e/desktop/background";
+      images {
+         image: "e_colored.png" COMP;
+         image: "screen.png" COMP;
+         image: "dot_pattern.png" RAW;
+      }
+      parts {
+         part { 
+            name: "bg";
+            type: IMAGE;
+            description { 
+               state: "default" 0.0;
+               image.normal: "e_colored.png";
+               image.scale_hint: STATIC;
+               fill.smooth: 0;
+               aspect: (2880/2160) (2880/2160); 
+               aspect_preference: NONE;
+            }
+         }
+         part { 
+            name: "screen";
+            type: IMAGE;
+            description { 
+               state: "default" 0.0;
+               image.normal: "screen.png";
+               image.scale_hint: STATIC;
+               fill.smooth: 0;
+               aspect: (2880/2160) (2880/2160); 
+               aspect_preference: NONE;
+            }
+         }
+         part { 
+            name: "pat";
+            type: IMAGE;
+            description { 
+               state: "default" 0.0;
+               image.normal: "dot_pattern.png";
+               fill {
+                  size { 
+                     relative: 0.0 0.0; 
+                     offset: 256 256; 
+                  }
+               }
+            }
+         }
+      }
+   }
+}
